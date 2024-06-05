@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil</title>
+    <link rel="stylesheet" href="bouton.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../header.css" />
+    <link rel="icon" href="icons.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <h1>Système d'Arrosage Intelligent</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="/" tabindex="0">Accueil</a></li>
+        <li><a href="/surveillance" tabindex="0">Surveillance</a></li>
+        <li><a href="/prevision" tabindex="0">Prévisions Météo</a></li>
+        <li>
+          <a href="/bouton" class="active" tabindex="0">Boutons de Contrôle</a>
+        </li>
+        <li><a href="/contact" tabindex="0">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="main">
+      <div class="status">
+        <span id="status">non mis à jour</span>
+      </div>
+      <div id="modeIndicator" aria-live="polite"></div>
+      <div id="countdown" aria-live="assertive"></div>
+
+      <div class="divider"></div>
+      <div class="container">
+        <div class="under-container">
+          <button
+            class="button default"
+            id="manuel"
+            aria-label="Activer le mode manuel"
+          >
+            Manuel
+          </button>
+          <button
+            class="button start"
+            id="start"
+            aria-label="Démarrer l'arrosage"
+          >
+            Start
+          </button>
+          <button class="button stop" id="stop" aria-label="Arrêter l'arrosage">
+            Stop
+          </button>
+        </div>
+        <div class="under-container">
+          <button
+            class="button default"
+            id="auto"
+            aria-label="Activer le mode automatique"
+          >
+            Auto
+          </button>
+        </div>
+      </div>
+      <span id="timer" class="timer"></span>
+    </div>
+
+    <div class="background-image"></div>
+
+    <footer>
+      <p>&copy; 2024 Système d'Arrosage Intelligent. Tous droits réservés.</p>
+      <a href="https://www.instagram.com/projet_arrosage_snir" target="_blank">
+        <img src="instas.gif" alt="Instagram" />
+      </a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="bouton.js"></script>
+    <script src="https://cdn.socket.io/4.3.2/socket.io.min.js"></script>
+  </body>
+</html>
+
+

@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  background-image: url("https://www.renovationettravaux.fr/wp-content/uploads/2015/07/arrosage-automatique-2-1024x678.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Styles for navigation and headers */
+header h1 {
+  text-align: center;
+  color: white;
+}
+
+nav {
+  background-color: #333;
+  text-align: center;
+}
+
+nav ul {
+  display: inline-block; /* Center align the menu */
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #555;
+}
+
+/* Styles for sections */
+.surveillance-section {
+  padding-top: 20px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.surveillance-title {
+  text-align: center;
+}
+
+.surveillance {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.humidite,
+.eau {
+  flex: 1;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Styles for progress bars */
+.progressbar-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.progressbar {
+  height: 20px;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+  width: 0%; /* Width initially 0%, will be updated by JavaScript */
+}
+
+.low {
+  background-color: red;
+}
+.medium {
+  background-color: yellow;
+}
+.high {
+  background-color: green;
+}
+
+footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer img {
+  max-width: 50px; /* Choisissez la largeur maximale souhaitée */
+}

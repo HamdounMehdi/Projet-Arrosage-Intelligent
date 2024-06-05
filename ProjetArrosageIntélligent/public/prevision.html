@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="previson.css" />
+    <link rel="stylesheet" href="../header.css" />
+    <link rel="icon" href="icons.jpg" type="image/x-icon" />
+    <title>Prévision Météo</title>
+  </head>
+  <body>
+    <header>
+      <h1>Système d'Arrosage Intelligent</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="/" tabindex="0">Accueil</a></li>
+        <li><a href="/surveillance" tabindex="0">Surveillance</a></li>
+        <li>
+          <a href="/prevision" class="active" tabindex="0">Prévisions Météo</a>
+        </li>
+        <li><a href="/bouton" tabindex="0">Boutons de Contrôle</a></li>
+        <li><a href="/contact" tabindex="0">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="background-image"></div>
+    <div class="conteneur">
+      <div class="infos-actuelles">
+        <div class="container-date">
+          <div class="autres" id="infos-actuelles">
+            <div class="container-lieu">
+              <div class="fuseau-horaire" id="fuseau-horaire">/</div>
+              <div class="pays" id="pays">IN</div>
+            </div>
+            <div class="heure" id="heure">12:30</div>
+            <div class="date" id="date">Mardi, 13 Février</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prevision">
+      <div class="prevision-heure" id="prevision-heure">
+        <!-- Les prévisions des 7 prochaines heures seront ajoutées ici par JavaScript -->
+      </div>
+
+      <div id="graphique">
+        <!-- Géré dans le js -->
+      </div>
+
+      <div class="prevision-future" id="prevision-future">
+        <!-- Les prévisions météo des prochains jours seront ajoutées ici par JavaScript -->
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/fr.min.js"></script>
+
+    <script src="prevision.js"></script>
+  </body>
+</html>

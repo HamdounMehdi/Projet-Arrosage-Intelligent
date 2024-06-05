@@ -1,0 +1,26 @@
+curl -X POST -H "Content-Type: application/json" -d '{"Temperature": "12", "Taux": "40"}' http://localhost:3000/submit
+curl -X POST -H "Content-Type: application/json" -d '{"Taux": "30"}' http://localhost:3000/submit1
+
+curl -X GET http://localhost:3000/donnees/humidite
+curl -X GET http://localhost:3000/donnees/niveauEau
+
+mosquitto_sub -h 63.34.215.128 -p 1883 -u "arrosage@ttn" -P "NNSXS.6AF7BMCOHUUM6JT3RU67G55LP3LYDKT3M675HBQ.VGODOEAJOKK43AUM2Z7JPRJWJRUJLFCATNUFZDDZONTT7A6M2ZBA" -t "v3/arrosage@ttn/devices/eui-a84041b791868901/up"
+mosquitto_sub -h 63.34.215.128 -p 1883 -u "arrosage@ttn" -P "NNSXS.6AF7BMCOHUUM6JT3RU67G55LP3LYDKT3M675HBQ.VGODOEAJOKK43AUM2Z7JPRJWJRUJLFCATNUFZDDZONTT7A6M2ZBA" -t "v3/arrosage@ttn/devices/eui-a840419d21868903/up"
+mosquitto_sub -h 63.34.215.128 -p 1883 -u "arrosage@ttn" -P "NNSXS.6AF7BMCOHUUM6JT3RU67G55LP3LYDKT3M675HBQ.VGODOEAJOKK43AUM2Z7JPRJWJRUJLFCATNUFZDDZONTT7A6M2ZBA" -t "v3/arrosage@ttn/devices/eui-a8404199a187195f/up"
+
+mosquitto_sub -h eu1.cloud.thethings.network -p 1883 -u "arrosage@ttn" -P "NNSXS.6AF7BMCOHUUM6JT3RU67G55LP3LYDKT3M675HBQ.VGODOEAJOKK43AUM2Z7JPRJWJRUJLFCATNUFZDDZONTT7A6M2ZBA" -t "v3/arrosage@ttn/devices/eui-a84041b791868901/up"
+mosquitto_sub -h eu1.cloud.thethings.network -p 1883 -u "arrosage@ttn" -P "NNSXS.6AF7BMCOHUUM6JT3RU67G55LP3LYDKT3M675HBQ.VGODOEAJOKK43AUM2Z7JPRJWJRUJLFCATNUFZDDZONTT7A6M2ZBA" -t "v3/arrosage@ttn/devices/eui-a840419d21868903/up"
+mosquitto_sub -h eu1.cloud.thethings.network -p 8883 -u "arrosage@ttn" -P "NNSXS.6AF7BMCOHUUM6JT3RU67G55LP3LYDKT3M675HBQ.VGODOEAJOKK43AUM2Z7JPRJWJRUJLFCATNUFZDDZONTT7A6M2ZBA" -t "v3/arrosage@ttn/devices/eui-a8404199a187195f/up"
+
+mosquitto_pub -h 63.34.215.128 -p 1883 -u "arrosage" -P "NNSXS.6AF7BMCOHUUM6JT3RU67G55LP3LYDKT3M675HBQ.VGODOEAJOKK43AUM2Z7JPRJWJRUJLFCATNUFZDDZONTT7A6M2ZBA" -t "v3/arrosage@ttn/devices/eui-a8404199a187195f/down/push" -m "{\"downlinks\":[{\"f_port\": 2,\"frm_payload\":\"AwEA\",\"confirmed\":true}]}"
+mosquitto_pub -h 63.34.215.128 -p 1883 -u "arrosage" -P "NNSXS.6AF7BMCOHUUM6JT3RU67G55LP3LYDKT3M675HBQ.VGODOEAJOKK43AUM2Z7JPRJWJRUJLFCATNUFZDDZONTT7A6M2ZBA" -t "v3/arrosage@ttn/devices/eui-a8404199a187195f/down/push" -m "{\"downlinks\":[{\"f_port\":2,\"frm_payload\":\"AwDA\",\"confirmed\":true}]}"
+
+Payload pour activer RO1: 03 01 00
+Payload pour désactiver RO1: 03 00 00
+
+Payload simulation des données eau 50% 415mm : 0D 2B 01 9F 00 00 00 01      3ème et 4ème bits    04 19 34 49
+Payload simulation des données eau 4% 30mm : 0D 2B 00 1E 00 00 00 01
+0D 2B 03 2A 00 00 00 01
+
+Payload simulation des données humidite 60% : 0D 20 00 00 17 70 08 61 00 24 10     5ème et 6ème bits    13 38 43 58
+Payload simulation des données humidite 10% : 0D 20 00 00 03 E8 08 61 00 24 10

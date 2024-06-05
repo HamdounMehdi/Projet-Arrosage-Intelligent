@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Système d'Arrosage Intelligent</title>
+    <link rel="stylesheet" href="surveillance.css" />
+    <link rel="stylesheet" href="../header.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="icons.jpg" type="image/x-icon" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Système d'Arrosage Intelligent</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="/" tabindex="0">Accueil</a></li>
+        <li>
+          <a href="/surveillance" class="active" tabindex="0">Surveillance</a>
+        </li>
+        <li><a href="/prevision" tabindex="0">Prévisions Météo</a></li>
+        <li><a href="/bouton" tabindex="0">Boutons de Contrôle</a></li>
+        <li><a href="/contact" tabindex="0">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="surveillance-section" id="surveillance">
+      <h2 class="surveillance-title">Surveillance</h2>
+      <div class="surveillance">
+        <div class="humidite" id="humidite-sol">
+          <h3>Humidité du Sol</h3>
+          <span id="humidite-valeur">En attente de données...</span>
+          <div class="progressbar-container">
+            <div class="progressbar" id="humidite-progress"></div>
+          </div>
+          <div class="chart-container">
+            <canvas id="humiditeChart"></canvas>
+          </div>
+        </div>
+        <div class="eau" id="niveau-eau">
+          <h3>Niveau d'Eau dans la Cuve</h3>
+          <span id="eau-valeur">En attente de données...</span>
+          <div class="progressbar-container">
+            <div class="progressbar" id="eau-progress"></div>
+          </div>
+          <div class="chart-container">
+            <canvas id="eauChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Système d'Arrosage Intelligent. Tous droits réservés.</p>
+      <a href="https://www.instagram.com/projet_arrosage_snir" target="_blank">
+        <img src="instas.gif" alt="Instagram" />
+      </a>
+    </footer>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="surveillance.js"></script>
+  </body>
+</html>

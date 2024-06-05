@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background-color: #333;
+  text-align: center;
+}
+
+nav ul {
+  display: inline-block; /* Center align the menu */
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #555;
+}
+
+/* Réinitialisation des styles */
+* {
+  box-sizing: border-box; /* La boîte de tous les éléments inclut la bordure et le remplissage dans le calcul de la largeur et de la hauteur */
+  margin: 0; /* Annule les marges par défaut */
+  padding: 0; /* Annule les remplissages par défaut */
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("https://www.renovationettravaux.fr/wp-content/uploads/2015/07/arrosage-automatique-2-1024x678.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* Conteneur principal */
+.conteneur {
+  padding: 20px 70px; /* Ajoute un remplissage intérieur de 20px en haut et en bas, 70px à gauche et à droite */
+  color: #fff; /* Définit la couleur du texte en blanc */
+}
+
+/* Flexbox pour les informations actuelles */
+.infos-actuelles {
+  display: flex; /* Utilise Flexbox pour disposer les éléments en mode ligne */
+  justify-content: space-between; /* Répartit les éléments horizontalement avec un espacement égal entre eux */
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne lorsque l'espace est insuffisant */
+}
+
+/* Styles pour la date */
+.container-date {
+  font-weight: 100; /* Définit le poids de la police à 100 (très léger) */
+}
+
+.container-date .heure {
+  font-size: 70px; /* Définit la taille de la police à 70px */
+}
+
+.container-date #am-pm {
+  font-size: 30px; /* Définit la taille de la police à 30px */
+  margin-left: 20px; /* Ajoute une marge à gauche de 20px */
+}
+
+.container-date .date {
+  font-size: 30px; /* Définit la taille de la police à 30px */
+}
+
+/* Styles pour le lieu */
+.container-lieu {
+  text-align: end; /* Aligne le texte à droite */
+}
+
+.container-lieu .fuseau-horaire {
+  font-size: 30px; /* Définit la taille de la police à 30px */
+  font-weight: 100; /* Définit le poids de la police à 100 (très léger) */
+}
+
+.container-lieu .pays {
+  font-size: 12px; /* Définit la taille de la police à 12px */
+  font-weight: 700; /* Définit le poids de la police à 700 (gras) */
+}
+
+/* Styles pour les autres éléments */
+.infos-actuelles .autres {
+  display: flex; /* Utilise Flexbox pour disposer les éléments en mode ligne */
+  flex-direction: column; /* Aligne les éléments en mode colonne */
+  background: rgba(
+    24,
+    24,
+    27,
+    0.6
+  ); /* Définit la couleur d'arrière-plan avec une opacité de 0.6 */
+  padding: 20px; /* Ajoute un remplissage intérieur de 20px */
+  border-radius: 10px; /* Arrondit les coins avec un rayon de 10px */
+  margin: 10px 0; /* Ajoute des marges de 10px en haut et en bas */
+  border: 1px solid #eee; /* Définit une bordure de 1px solide avec une couleur gris clair */
+}
+
+.infos-actuelles .autres .element-meteo {
+  display: flex; /* Utilise Flexbox pour disposer les éléments en mode ligne */
+  justify-content: space-between; /* Répartit les éléments horizontalement avec un espacement égal entre eux */
+}
+
+.prevision {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Styles pour la section des prévisions futures */
+.prevision-future {
+  background: rgba(
+    24,
+    24,
+    27,
+    0.8
+  ); /* Définit la couleur d'arrière-plan avec une opacité de 0.8 */
+  padding: 25px; /* Ajoute un remplissage intérieur de 25px */
+  display: flex; /* Utilise Flexbox pour disposer les éléments en mode ligne */
+  color: white; /* Définit la couleur du texte en blanc */
+  width: 100%; /* Définit la largeur de l'élément comme étant 100% de la largeur de son conteneur */
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  justify-content: center; /* Aligne les éléments horizontalement au centre */
+  border: 1px solid #eee; /* Définit une bordure de 1px solide avec une couleur gris clair */
+  border-radius: 10px; /* Arrondit les coins avec un rayon de 10px */
+  overflow: hidden;
+}
+
+/* Styles pour la section de la prévision actuelle */
+.prevision-future .aujourdhui {
+  display: flex; /* Utilise Flexbox pour disposer les éléments en mode ligne */
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  justify-content: center; /* Aligne les éléments horizontalement au centre */
+  border-radius: 10px; /* Arrondit les coins avec un rayon de 10px */
+  padding: 15px; /* Ajoute un remplissage intérieur de 15px */
+  padding-right: 40px; /* Ajoute un remplissage à droite de 40px */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* Définit la couleur d'arrière-plan avec une opacité de 0.2 */
+}
+
+.prevision-future .aujourdhui .jour {
+  padding: 5px 15px; /* Ajoute un remplissage de 5px en haut et en bas, 15px à gauche et à droite */
+  background: #3c3c44; /* Définit la couleur d'arrière-plan en gris foncé */
+  border-radius: 50px; /* Arrondit les coins avec un rayon de 50px */
+  text-align: center; /* Centre le texte horizontalement */
+}
+
+.prevision-future .aujourdhui .temp {
+  font-size: 18px; /* Définit la taille de la police à 18px */
+  padding-top: 15px; /* Ajoute un remplissage en haut de 15px */
+}
+
+/* Styles pour la section de prévisions météorologiques futures */
+.prevision-future .prevision-meteo {
+  display: flex; /* Utilise Flexbox pour disposer les éléments en mode ligne */
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne lorsque l'espace est insuffisant */
+  justify-content: center; /* Aligne les éléments horizontalement au centre */
+}
+
+.prevision-future .element-prevision-meteo {
+  display: flex; /* Utilise Flexbox pour disposer les éléments en mode ligne */
+  flex-direction: column; /* Aligne les éléments en mode colonne */
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  justify-content: center; /* Aligne les éléments horizontalement au centre */
+  margin: 10px; /* Ajoute une marge de 10px autour de l'élément */
+  padding: 15px; /* Ajoute un remplissage intérieur de 15px */
+  border-radius: 10px; /* Arrondit les coins avec un rayon de 10px */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* Définit la couleur d'arrière-plan avec une opacité de 0.2 */
+  border: 1px solid #eee; /* Définit une bordure de 1px solide avec une couleur gris clair */
+}
+
+.prevision-future .element-prevision-meteo .jour {
+  padding: 5px 15px; /* Ajoute un remplissage de 5px en haut et en bas, 15px à gauche et à droite */
+  background: #3c3c44; /* Définit la couleur d'arrière-plan en gris foncé */
+  border-radius: 50px; /* Arrondit les coins avec un rayon de 50px */
+  text-align: center; /* Centre le texte horizontalement */
+}
+
+.prevision-future .element-prevision-meteo .temp {
+  font-weight: 100; /* Définit le poids de la police à 100 (très léger) */
+  font-size: 12px; /* Définit la taille de la police à 12px */
+}
+
+/* Styles pour la section des prévisions des prochaines heures */
+.prevision-heure {
+  background: rgba(
+    24,
+    24,
+    27,
+    0.8
+  ); /* Définit la couleur d'arrière-plan avec une opacité de 0.8 */
+  padding: 25px; /* Ajoute un remplissage intérieur de 25px */
+  display: flex; /* Utilise Flexbox pour disposer les éléments en mode ligne */
+  color: white; /* Définit la couleur du texte en blanc */
+  width: 100%; /* Définit la largeur de l'élément comme étant 100% de la largeur de son conteneur */
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  justify-content: center; /* Aligne les éléments horizontalement au centre */
+  border: 1px solid white; /* Définit une bordure de 1px solide avec une couleur blanche */
+  border-radius: 10px; /* Arrondit les coins avec un rayon de 10px */
+  overflow: hidden;
+}
+
+.prevision-heure .element-prevision-heure {
+  display: flex; /* Utilise Flexbox pour disposer les éléments en mode ligne */
+  flex-direction: column; /* Aligne les éléments en mode colonne */
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  justify-content: center; /* Aligne les éléments horizontalement au centre */
+  margin: 0 10px; /* Ajoute une marge de 0 en haut et en bas, 10px à gauche et à droite */
+  border: 1px solid #eee; /* Définit une bordure de 1px solide avec une couleur gris clair */
+  padding: 15px; /* Ajoute un remplissage intérieur de 15px */
+  border-radius: 10px; /* Arrondit les coins avec un rayon de 10px */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* Définit la couleur d'arrière-plan avec une opacité de 0.2 */
+}
+
+.prevision-heure .element-prevision-heure .heure {
+  padding: 5px 15px; /* Ajoute un remplissage de 5px en haut et en bas, 15px à gauche et à droite */
+  background: #3c3c44; /* Définit la couleur d'arrière-plan en gris foncé */
+  border-radius: 50px; /* Arrondit les coins avec un rayon de 50px */
+  text-align: center; /* Centre le texte horizontalement */
+}
+
+.prevision-heure .element-prevision-heure .pluie {
+  font-weight: 100; /* Définit le poids de la police à 100 (très léger) */
+  font-size: 12px; /* Définit la taille de la police à 12px */
+}
+
+/* Media queries pour les écrans de taille réduite */
+@media only screen and (max-width: 730px) {
+  .conteneur {
+    padding: 20px; /* Réduit le remplissage à 20px sur les côtés */
+  }
+
+  .prevision-future {
+    justify-content: start;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .prevision-future .aujourdhui .temp {
+    font-size: 16px; /* Réduit la taille de la police à 16px */
+  }
+
+  .container-date .heure {
+    font-size: 50px; /* Réduit la taille de la police à 50px */
+  }
+
+  .container-date #am-pm {
+    font-size: 20px; /* Réduit la taille de la police à 20px */
+  }
+
+  .container-date .date {
+    font-size: 20px; /* Réduit la taille de la police à 20px */
+  }
+
+  .container-lieu {
+    text-align: end; /* Aligne le texte à droite */
+    margin-top: 15px; /* Ajoute une marge en haut de 15px */
+  }
+
+  .container-lieu .fuseau-horaire {
+    font-size: 20px; /* Réduit la taille de la police à 20px */
+  }
+
+  .infos-actuelles .autres {
+    padding: 12px; /* Réduit le remplissage à 12px */
+  }
+
+  .infos-actuelles .autres .element-meteo {
+    font-size: 14px; /* Réduit la taille de la police à 14px */
+  }
+}
+
+/* Media queries pour les écrans de taille moyenne */
+@media only screen and (max-width: 1000px) {
+  .prevision-future {
+    justify-content: start;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

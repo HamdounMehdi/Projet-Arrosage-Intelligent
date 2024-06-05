@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+/* Modifier le style de base */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+header {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background-color: #333;
+  text-align: center;
+}
+
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #555;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("https://www.renovationettravaux.fr/wp-content/uploads/2015/07/arrosage-automatique-2-1024x678.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(100%);
+}
+
+h2 {
+  padding: 0 10px;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+h5 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* CONTACT */
+input,
+textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.prenom-nom {
+  display: flex;
+  gap: 10px;
+}
+
+.tel-email {
+  display: flex;
+  gap: 10px;
+}
+
+.sujet {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+}
+
+::placeholder {
+  color: #888;
+}
+
+.buttonSubmit {
+  border: none;
+  width: 180px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #daa520;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.buttonSubmit:hover {
+  background-color: #c5941a;
+}
+
+.section-con {
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer img {
+  max-width: 50px; /* Choisissez la largeur maximale souhaitée */
+}

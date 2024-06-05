@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Styles de base */
+body {
+  background-color: #f0f0f0;
+  color: #333; /* Améliorer le contraste */
+}
+
+header {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background-color: #333;
+  text-align: center;
+}
+
+nav ul {
+  display: inline-block; /* Center align the menu */
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #555;
+}
+
+/* Styles des boutons */
+.main {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: #f5f5f5;
+  width: 75%; /* Responsive */
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.status {
+  font-size: 25px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  flex-wrap: wrap; /* Wrap pour mobile */
+}
+
+.under-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.button {
+  width: 120px;
+  height: 60px;
+  padding: 5px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  background-color: #cccccc;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button:hover:focus {
+  box-shadow: 0 0 5px #666;
+}
+
+.default {
+  background-color: #10121d;
+  color: white;
+}
+
+.default:hover {
+  background-color: #10121db4;
+}
+
+.start {
+  background-color: #4caf50;
+}
+
+.start:hover {
+  background-color: #4caf50df;
+}
+
+.stop {
+  background-color: #f44336df;
+}
+
+.stop:hover {
+  background-color: #f44336c2;
+}
+
+.timer {
+  font-size: 30px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("https://www.renovationettravaux.fr/wp-content/uploads/2015/07/arrosage-automatique-2-1024x678.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
